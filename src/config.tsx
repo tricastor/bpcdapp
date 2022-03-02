@@ -1,4 +1,4 @@
 export const contractAddress =
-  'erd1qqqqqqqqqqqqqpgquvt728n40ssd8n2qns9jrlqpwq2jc4rj4cysfuj3ad';
+  'erd1qqqqqqqqqqqqqpgqew8guupmel4g2695qfkh7yx2ehwv597zfz8sge07up';
 
-export const dAppName = 'example Dapp';
+export const dAppName = 'BPC demo Dapp';

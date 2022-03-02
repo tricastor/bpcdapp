@@ -88,8 +88,8 @@ const Actions = () => {
 
   const sendPingTransaction = async () => {
     const pingTransaction = {
-      value: '1000000000000000000',
-      data: 'ping',
+      value: '100000000000000000',
+      data: 'mint@01',
       receiver: contractAddress
     };
     await refreshAccount();
@@ -97,9 +97,9 @@ const Actions = () => {
     const { sessionId /*, error*/ } = await sendTransactions({
       transactions: pingTransaction,
       transactionsDisplayInfo: {
-        processingMessage: 'Processing Ping transaction',
-        errorMessage: 'An error has occured during Ping',
-        successMessage: 'Ping transaction successful'
+        processingMessage: 'Processing mint transaction',
+        errorMessage: 'An error has occured during Mint',
+        successMessage: 'Mint transaction successful'
       },
       redirectAfterSign: false
     });
@@ -148,7 +148,7 @@ const Actions = () => {
                 <FontAwesomeIcon icon={faArrowUp} className='text-primary' />
               </button>
               <a href='/' className='text-white text-decoration-none'>
-                Ping
+                Mint !
               </a>
             </div>
           ) : (
