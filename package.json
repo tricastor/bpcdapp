@@ -1,8 +1,8 @@
 {
-  "name": "@elrondnetwork/dapp-template",
+  "name": "@tricastor/bpc-dapp",
   "description": "BPC Mint Dapp",
   "version": "0.2.0",
-  "author": "ElrondNetwork",
+  "author": "Tricastor",
   "license": "GPL-3.0-or-later",
   "repository": "@elrondnetwork/dapp-template",
   "dependencies": {
