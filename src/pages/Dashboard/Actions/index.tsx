@@ -117,7 +117,7 @@ const Actions = () => {
                 <FontAwesomeIcon icon={faArrowUp} className='text-primary' />
               </button>
               <a href='/' className='text-white text-decoration-none'>
-                click arrow to Mint !
+                Click the up arrow to Mint ! (0.1 EGLD)
               </a>
             </div>
           ) : (
