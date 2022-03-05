@@ -15,7 +15,6 @@ import {
 } from '@elrondnetwork/erdjs';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import moment from 'moment';
 import { contractAddress } from 'config';
 
 const Actions = () => {
