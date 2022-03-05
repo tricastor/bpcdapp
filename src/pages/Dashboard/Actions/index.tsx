@@ -108,31 +108,6 @@ const Actions = () => {
     }
   };
 
-  const sendPongTransaction = async () => {
-    const pongTransaction = {
-      value: '0',
-      data: 'pong',
-      receiver: contractAddress
-    };
-    await refreshAccount();
-
-    const { sessionId /*, error*/ } = await sendTransactions({
-      transactions: pongTransaction,
-      transactionsDisplayInfo: {
-        processingMessage: 'Processing Pong transaction',
-        errorMessage: 'An error has occured during Pong',
-        successMessage: 'Pong transaction successful'
-      },
-      redirectAfterSign: false
-    });
-    if (sessionId != null) {
-      setTransactionSessionId(sessionId);
-    }
-  };
-
-  const pongAllowed = secondsLeft === 0 && !hasPendingTransactions;
-  const notAllowedClass = pongAllowed ? '' : 'not-allowed disabled';
-
   const timeRemaining = moment()
     .startOf('day')
     .seconds(secondsLeft || 0)
@@ -148,39 +123,12 @@ const Actions = () => {
                 <FontAwesomeIcon icon={faArrowUp} className='text-primary' />
               </button>
               <a href='/' className='text-white text-decoration-none'>
-                Mint !
+                click arrow to Mint !
               </a>
             </div>
           ) : (
             <>
-              <div className='d-flex flex-column'>
-                <div
-                  {...{
-                    className: `action-btn ${notAllowedClass}`,
-                    ...(pongAllowed ? { onClick: sendPongTransaction } : {})
-                  }}
-                >
-                  <button className={`btn ${notAllowedClass}`}>
-                    <FontAwesomeIcon
-                      icon={faArrowDown}
-                      className='text-primary'
-                    />
-                  </button>
-                  <span className='text-white'>
-                    {pongAllowed ? (
-                      <a href='/' className='text-white text-decoration-none'>
-                        Pong
-                      </a>
-                    ) : (
-                      <>Pong</>
-                    )}
-                  </span>
-                </div>
-                {!pongAllowed && !hasPendingTransactions && (
-                  <span className='opacity-6 text-white'>
-                    {timeRemaining} until able to Pong
-                  </span>
-                )}
+              <div className='d-flex flex-column'>Done
               </div>
             </>
           )}
