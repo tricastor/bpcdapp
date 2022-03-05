@@ -13,7 +13,7 @@ import {
   ProxyProvider,
   Query
 } from '@elrondnetwork/erdjs';
-import { faArrowUp, faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import moment from 'moment';
 import { contractAddress } from 'config';
@@ -107,11 +107,6 @@ const Actions = () => {
       setTransactionSessionId(sessionId);
     }
   };
-
-  const timeRemaining = moment()
-    .startOf('day')
-    .seconds(secondsLeft || 0)
-    .format('mm:ss');
 
   return (
     <div className='d-flex mt-4 justify-content-center'>
