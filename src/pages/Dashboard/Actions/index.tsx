@@ -128,8 +128,6 @@ const Actions = () => {
             </div>
           ) : (
             <>
-              <div className='d-flex flex-column'>Done
-              </div>
             </>
           )}
         </>
